@@ -57,12 +57,15 @@
 (require 'init-general)
 
 ;; c++ ide
-(require 'init-ggtags)
+;; (require 'init-ggtags)
 
 ;; experimental C++ ide
 (require 'init-helm)
 (require 'init-cedet)
 (require 'init-editing)
+
+;; python
+(require 'init-python)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
