@@ -255,4 +255,12 @@ Position the cursor at it's beginning, according to the current mode."
 (global-set-key (kbd "M-o") 'prelude-smart-open-line)
 (global-set-key (kbd "M-o") 'open-line)
 
+;; for supporting Chinese decoding
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+                    charset (font-spec :family "Microsoft Yahei" :size 14)))
+
+;; small fonts makes an eagle eye :D
+(set-face-attribute 'default nil :height 110)
+
 (provide 'init-editing)
