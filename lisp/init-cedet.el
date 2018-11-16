@@ -16,7 +16,7 @@
 (add-hook 'c++-mode-hook 'sushuiyuzhou/cedet-hook)
 
 ;; Enable EDE only in C/C++
-(require 'ede)
-(global-ede-mode)
+;; (require 'ede)
+;; (global-ede-mode)
 
 (provide 'init-cedet)

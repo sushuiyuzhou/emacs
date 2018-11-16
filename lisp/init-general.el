@@ -1,3 +1,6 @@
+;; no backup file
+(setq make-backup-files nil)
+
 ;; auto close bracket insertion. New in emacs 24
 (electric-pair-mode 1)
 
@@ -50,8 +53,13 @@
   :init
   (global-company-mode 1)
   (delete 'company-semantic company-backends))
-;; (define-key c-mode-map  [(control tab)] 'company-complete)
-;; (define-key c++-mode-map  [(control tab)] 'company-complete)
+  (define-key c-mode-map  [(control tab)] 'company-complete)
+  (define-key c++-mode-map  [(control tab)] 'company-complete)
+
+;; header file completion
+(add-to-list 'company-backends 'company-c-headers)
+;; configuration wise e.g. (add-to-list 'company-c-headers-path-system "/usr/include/c++/4.8/")
+;; project wise (in .dir-locals.el) e.g company-c-headers-path-user
 
 ;; Package: projejctile
 (use-package projectile

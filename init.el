@@ -57,7 +57,8 @@
 (require 'init-general)
 
 ;; c++ ide
-;; (require 'init-ggtags)
+(require 'init-ggtags)
+(require 'init-helm-gtags)
 
 ;; experimental C++ ide
 (require 'init-helm)
@@ -83,9 +84,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote nil))
  '(package-selected-packages
    (quote
-    (sr-speedbar iedit comment-dwim-2 ws-butler dtrt-indent clean-aindent-mode yasnippet undo-tree volatile-highlights use-package helm clang-format ggtags yagist vc-darcs switch-window smex session mmm-mode magithub magit-todos ivy-xref ivy-historian ibuffer-vc ibuffer-projectile gitignore-mode github-clone gitconfig-mode git-timemachine git-messenger git-blamed fullframe exec-path-from-shell dimmer diminish diff-hl darcsum counsel company-quickhelp color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized cmd-to-echo bug-reference-github browse-at-remote anzu alert)))
+    (company-c-headers markdown-mode cmd-to-echo alert ibuffer-projectile magithub github-clone bug-reference-github yagist git-messenger git-commit magit-todos magit git-timemachine gitconfig-mode gitignore-mode git-blamed vc-darcs darcsum browse-at-remote diff-hl mmm-mode session switch-window company-quickhelp company ivy-xref swiper projectile diminish counsel ivy-historian ivy smex ibuffer-vc anzu dimmer color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized exec-path-from-shell fullframe seq sr-speedbar iedit comment-dwim-2 ws-butler dtrt-indent clean-aindent-mode yasnippet undo-tree volatile-highlights use-package helm clang-format ggtags)))
  '(session-use-package t nil (session)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
